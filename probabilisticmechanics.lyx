@@ -1,0 +1,857 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+A Derivation of Probalistic Mechanics
+\end_layout
+
+\begin_layout Standard
+A Theory of Stochastic Processes and Matter Waves
+\end_layout
+
+\begin_layout Standard
+Luke Durback
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Classical Mechanics:
+\end_layout
+
+\begin_layout Standard
+Given 2 dots and a utility function, the critical paths of the utility function
+ through those 2 dots stabilize the utility function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S(x_{2},t_{2};x_{1},t_{1})=\int_{x_{1},t_{1}}^{x_{2},t_{2}}L(x,t,dx,dt)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta S=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probabilistic Mechanics:
+\end_layout
+
+\begin_layout Standard
+Given 2 times, and probability distributions for 1 dot at each time, the
+ form of the utility function, and the fact that the utility function has
+ increased by 1 unit (
+\begin_inset Formula $\hbar$
+\end_inset
+
+), the critical strategy of the average utility function stabilizes the
+ average utility function.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Avg[S](t_{2},t_{1}) & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}(x_{1};t_{1})S(x_{2},t_{2};x_{1},t_{1})P_{2}(x_{2};t_{2})dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}SP_{2}dx_{1}dx_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\delta Avg[S] & =0\\
+S & =\hbar
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: I am going against modern quantum convention by using 
+\begin_inset Formula $S=\hbar$
+\end_inset
+
+ instead of 
+\begin_inset Formula $S=-i\hbar$
+\end_inset
+
+.
+ This has the effect of making electrons, protons, etc.
+ which have no trajectories out to have imaginary mass and gives real trajectori
+es to real masses.
+\end_layout
+
+\begin_layout Standard
+The above framework includes classical mechanics setups as well as new probabili
+stic setups.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Feynman Picture
+\end_layout
+
+\begin_layout Standard
+Vary with respect to 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+0 & =\delta Avg[S](t_{2},t_{1})=\delta\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}SP_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\delta(P_{1}SP_{2})dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}(\frac{\overset{\leftarrow}{d}}{dt}S\delta t_{1}+\delta\int_{t_{1}}^{t_{2}}(Ldt)+\delta t_{2}S\frac{\overset{\rightarrow}{d}}{dt})P_{2}dx_{1}dx_{2}\\
+ & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}(\frac{\overset{\leftarrow}{d}}{dt}S\delta t_{1}+\int_{t_{1}}^{t_{2}}\delta(Ldt)+\delta t_{2}S\frac{\overset{\rightarrow}{d}}{dt})P_{2}dx_{1}dx_{2}\\
+ & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}(\frac{\overset{\leftarrow}{d}}{dt}S\delta t_{1}+[L\delta t]_{t_{1}}^{t_{2}}+\delta t_{2}S\frac{\overset{\rightarrow}{d}}{dt})P_{2}dx_{1}dx_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conclusions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{1}L & =\hbar\frac{dP_{1}}{dt}\\
+LP_{2} & =-\hbar\frac{dP_{2}}{dt}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solutions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{1}(x,t)=\frac{1}{Z}\int_{t_{1}}^{t}e^{\frac{1}{\hbar}\int_{x_{1},t_{1}}^{x,t}Ldt}P_{1}(x_{1},t_{1})Dx(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{2}(x,t)=\frac{1}{Z}\int_{t_{2}}^{t}e^{-\frac{1}{\hbar}\int_{x_{2},t_{2}}^{x,t}Ldt}P_{2}(x_{2},t_{2})Dx(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Schroedinger and Heisenberg Pictures
+\end_layout
+
+\begin_layout Standard
+Vary with respect to 
+\begin_inset Formula $(x(t),t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+0=\delta Avg[S](t_{2},t_{1}) & =\delta\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}SP_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\delta(P_{1}SP_{2})dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\delta\int_{x_{1},t_{1}}^{x_{2},t_{2}}(Ldt)+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\int_{x_{1},t_{1}}^{x_{2},t_{2}}(\delta Ldt)+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\int_{x_{1},t_{1}}^{x_{2},t_{2}}[\frac{\partial Ldt}{\partial x}\delta x+\frac{\partial Ldt}{\partial dx}\delta dx+\frac{\partial Ldt}{\partial t}\delta t+\frac{\partial Ldt}{\partial dt}\delta dt]+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\int_{x_{1},t_{1}}^{x_{2},t_{2}}[\frac{\partial Ldt}{\partial x}\delta x-\frac{d\partial Ldt}{\partial dx}\delta x+d(\frac{\partial Ldt}{\partial dx}\delta x)+\frac{\partial Ldt}{\partial t}\delta t-\frac{d\partial Ldt}{\partial dt}\delta t+d(\frac{\partial Ldt}{\partial dt}\delta t)]+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Name
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Fdt:=\frac{\partial Ldt}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p:=\frac{\partial Ldt}{\partial dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Qdt:=-\frac{\partial Ldt}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E:=-\frac{\partial Ldt}{\partial dt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+0 & =\delta Avg[S](t_{2},t_{1})=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\int_{x_{1},t_{1}}^{x_{2},t_{2}}[(Fdt-dp)\delta x+d(p\delta x)-(Qdt-dE)\delta t-d(E\delta t)]dt+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}P_{1}[(\frac{\overset{\leftarrow}{\partial}}{\partial x}_{2}\delta x_{2}+\frac{\overset{\leftarrow}{\partial}}{\partial t}_{2}\delta t_{2})S+\int_{x_{1},t_{1}}^{x_{2},t_{2}}[(Fdt-dp)\delta x-(Qdt-dE)\delta t]+[p\delta x-E\delta t|_{\tau_{1}}^{\tau_{2}}+S(\delta x_{1}\frac{\overset{\rightarrow}{\partial}}{\partial x_{1}}+\delta t_{1}\frac{\overset{\rightarrow}{\partial}}{\partial t_{1}})]P_{2}dx_{1}dx_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conclusions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Fdt=dp$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Qdt=dE$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p=-\frac{\overset{\leftarrow}{\partial}}{\partial x}S=S\frac{\overset{\rightarrow}{\partial}}{\partial x}=-\hbar\frac{\overset{\leftarrow}{\partial}}{\partial x}=\hbar\frac{\overset{\rightarrow}{\partial}}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E=$
+\end_inset
+
+
+\begin_inset Formula $\frac{\overset{\leftarrow}{\partial}}{\partial t}S=-S\frac{\overset{\rightarrow}{\partial}}{\partial t}=\hbar\frac{\overset{\leftarrow}{\partial}}{\partial t}=-\hbar\frac{\overset{\rightarrow}{\partial}}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This gives us 
+\begin_inset Formula $[p,x]=\hbar$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+The Hamiltonian
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+d^{2}S & =d(Ldt)=\frac{\partial Ldt}{\partial x}dx+\frac{\partial Ldt}{\partial dx}d^{2}x+\frac{\partial Ldt}{\partial t}dt+\frac{\partial Ldt}{\partial dt}d^{2}t\\
+ & =dpdx+pd^{2}x-dEdt-Ed^{2}t\\
+ & =d(pdx-Edt)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=Ldt=pdx-Edt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $H(x,p,t)=p\frac{dx}{dt}-L$
+\end_inset
+
+ be the Legendre transform of 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $H=E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Schroedinger Picture
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $HP_{2}=\hbar\frac{\partial P_{2}}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{1}H=-\hbar\frac{\partial P_{1}}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solutions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{1}(x,t) & =e^{-\int_{t_{1}}^{t}\frac{Hdt}{\hbar}}P_{1}(x,t_{1})\\
+P_{2}(x,t) & =P_{2}(x,t_{2})e^{\int_{t_{2}}^{t}\frac{Hdt}{\hbar}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Density
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho(x;t)=P_{2}(x;t)P_{1}(x;t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=[P_{2}(x,t_{2})e^{\frac{-\int_{t}^{t_{2}}Hdt}{\hbar}}][e^{\frac{-\int_{t_{1}}^{t}Hdt}{\hbar}}P_{1}(x,t_{1})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Time Independent Case
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial V}{\partial t}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H(x,p,t)$
+\end_inset
+
+ is not a function of time.
+\end_layout
+
+\begin_layout Standard
+Consider eigenfunctions of 
+\begin_inset Formula $H(x,p).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+HP_{1} & =EP_{1}\\
+P_{2}H & =P_{2}E
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we have 
+\begin_inset Formula $-\hbar\frac{\partial P_{1}}{\partial t}=EP_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Inclusion of Quantum Mechanics
+\end_layout
+
+\begin_layout Standard
+If energy and momentum are real while mass, position, and velocity are imaginary
+, then quantum mechanics follows.
+\end_layout
+
+\begin_layout Standard
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Free Flight
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=\frac{1}{2}m\frac{dx^{2}}{dt^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Schroedinger Picture
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=\frac{p^{2}}{2m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+-\hbar\frac{\partial P_{1}}{\partial t} & =\frac{p^{2}}{2m}P_{1}=\frac{\hbar^{2}}{2m}\frac{\partial^{2}P_{1}}{\partial x^{2}}\\
+\hbar\frac{\partial P_{2}}{\partial t} & =P_{2}\frac{p^{2}}{2m}=\frac{\hbar^{2}}{2m}\frac{\partial^{2}P_{2}}{\partial x^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $P_{1}(x;t_{1})=\delta(x-x_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}(x;t_{2})=\delta(x-x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{1}p & =-\hbar\frac{\partial P_{1}}{\partial x}\\
+pP_{2} & =\hbar\frac{\partial P}{\partial x^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Take the Bilateral Laplace transform to get 
+\begin_inset Formula $P_{1}(p;t_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}(p;t_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{2}(p;t_{2})=\int_{-\infty}^{+\infty}e^{-px/\hbar}\delta(x-x_{2})dx=e^{-px_{2}/\hbar}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{1}(p,t_{1})=\int_{-\infty}^{+\infty}e^{px/\hbar}\delta(x-x_{1})dx=e^{px_{1}/\hbar}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solve these equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+-\hbar\frac{\partial P_{1}(p,t)}{\partial t} & =\frac{p^{2}}{2m}P_{1}(p,t)\\
+\hbar\frac{\partial P_{2}(p,t)}{\partial t} & =\frac{p^{2}}{2m}P_{2}(p,t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{1}(p,t) & =e^{-\frac{p^{2}}{2m\hbar}(t-t_{1})}P_{1}(p,t_{1})=e^{-\frac{p^{2}}{2m\hbar}(t-t_{1})+\frac{px_{1}}{\hbar}}\\
+P_{2}(p,t) & =e^{\frac{p^{2}}{2m\hbar}(t-t_{2})}P_{2}(p,t)=e^{\frac{p^{2}}{2m\hbar}(t-t_{2})-\frac{px_{2}}{\hbar}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reverse the Laplace Transform to get 
+\begin_inset Formula $P_{1}(x,t)$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}(x,t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P_{1}(x,t) & =\int_{-\infty}^{\infty}e^{-\frac{p^{2}}{2m\hbar}(t-t_{1})-\frac{p}{\hbar}(x-x_{1})}dp\\
+P_{2}(x,t) & =\int_{-\infty}^{\infty}e^{\frac{p^{2}}{2m\hbar}(t-t_{2})+\frac{p}{\hbar}(x-x_{2})}dp
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\rho(x,t) & =P_{1}(x,t)P_{2}(x,t)\\
+ & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}[e^{-\frac{p_{1}^{2}}{2m\hbar}(t-t_{1})-\frac{p_{1}}{\hbar}(x-x_{1})}][e^{\frac{p_{2}^{2}}{2m\hbar}(t-t_{2})+\frac{p_{2}}{\hbar}(x-x_{2})}]dp_{1}dp_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since we started with a classical situation of 
+\begin_inset Formula $P_{1}(x;t_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}(x;t_{2})$
+\end_inset
+
+ being dirac delta spikes, we stay in a classical situation.
+ In free-flight, we already know the answer is a delta spike that travels
+ at constant velocity between 
+\begin_inset Formula $(x_{1};t_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{2};t_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\delta(x-[(\frac{x_{2}-x_{1}}{t_{2}-t_{1}})(t-t_{1})+x_{1}])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Left to show: 
+\begin_inset Formula $\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}[e^{-\frac{p_{1}^{2}}{2m\hbar}(t-t_{1})-\frac{p_{1}}{\hbar}(x-x_{1})}][e^{\frac{p_{2}^{2}}{2m\hbar}(t-t_{2})+\frac{p_{2}}{\hbar}(x-x_{2})}]dp_{1}dp_{2}=\delta(x-[(\frac{x_{2}-x_{1}}{t_{2}-t_{1}})(t-t_{1})+x_{1}])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t_{1})=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}[e^{-\frac{p_{1}}{\hbar}(x-x_{1})}][e^{\frac{p_{2}^{2}}{2m\hbar}(t_{1}-t_{2})+\frac{p_{2}}{\hbar}(x-x_{2})}]dp_{1}dp_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is 
+\begin_inset Formula $\delta(x-x_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t_{2})=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}[e^{-\frac{p_{1}^{2}}{2m\hbar}(t_{2}-t_{1})-\frac{p_{1}}{\hbar}(x-x_{1})}][e^{\frac{p_{2}}{\hbar}(x-x_{2})}]dp_{1}dp_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is 
+\begin_inset Formula $\delta(x-x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the base of the exponential in the integral is linear in 
+\begin_inset Formula $(x,t)$
+\end_inset
+
+, we must have the result
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(x,t)=\delta(x-[(\frac{x_{2}-x_{1}}{t_{2}-t_{1}})(t-t_{1})+x_{1}])
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+—
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Matter-Wave Free Flight (Quantum Mechanics: Imaginary Mass, Position, and
+ Velocity and Real Energy and Momentum)
+\end_layout
+
+\begin_layout Standard
+Note that with this setup, we get Quantum Mechanical free flight
+\end_layout
+
+\end_body
+\end_document
